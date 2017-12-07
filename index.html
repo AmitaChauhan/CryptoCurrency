@@ -3,51 +3,68 @@
 <head>
     <script src= "https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.min.js"></script>
     <script src="js/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <meta charset="UTF-8">
-    <title>CrptoCurrency</title>
+    <title>CryptoCurrency</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Fjalla+One|Roboto' rel='stylesheet' type='text/css'>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="css/main.css">
+<!--   <link rel="stylesheet" href="css/main.css"> -->
     <link rel="favicon" href="favicon.ico">
+
 </head>
+
 <body>
+        <style>
+          .normal-text {
+            color: black;
+            text-align: center;
+          }
+
+          p {
+            font-size: 16px;
+            font-family: Monospace;
+          }
+        </style>
+
+        <h2 class="normal-text">Crypto Currency Calculator</h2>
+
+        <ul>
+          <li>BTC</li>
+          <li>BCH</li>
+          <li>XRP</li>
+          <li>IOTA</li>
+          <li>ETH</li>
+        </ul>
 
 
-
-    <div class="col-md-1">
-    </div>
-    <div class="jumbotron new-jumbotron">
-        <div class="container wrap-inside">
-
-
-            <div class="row">
-                <div class="col-md-4 wrap-inside">
-
-                </div>
-                <h1 class="col-md-8 heading-font" id="heading-size">Crpto Currency Calculator</h1>
-                <div class="col-md-8">
-
-                </div>
-            </div>
+        <div class="container">
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">+
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Litecoin (LTC)</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Nxt (NXT)</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Monero (XMR)</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Dogecoin (DOGE)</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CraigsCoin (CRAIG)</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">DigitalCash (DASH)</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Ripple (XMR)</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">ZCash (ZEC)</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Bitshares (BTS)</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">PeerCoin (PPC)</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">DigiByte (DGB)</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">BitcoinDark (BTCD)</a></li>
+              <li role="presentation" class="divider"></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+          </ul>
+          </div>
         </div>
-    </div>
-</div>
-
-<div class="text-container">
-    <div class="quote-container" id="foo-bar">
-    </div>
-    <hr>
-</div>
-
+        <button type="submit">Submit</button>
 
 
 <!-- Own script -->
