@@ -29,10 +29,6 @@
     margin-bottom: 1rem;
 }
 
-.pic-left-align {
-    text-align:left;
-    transform:scale(0.8);
-}
 
 
 
@@ -48,7 +44,7 @@ body {
 .intro-align {
     font-family: 'Droid Sans';
     font-size: 2.2rem;
-    margin-top: 5rem;
+    background-color: #111;
 }
 
 h1.heading-font#heading-size {
@@ -93,22 +89,7 @@ h1.heading-font#heading-size {
 }
 
 
-footer.new-quote#footer-size {
-    text-align: center;
-    margin-bottom: 0.5rem;
-    margin-left: 1rem;
-    font-family: 'Droid Sans';
-    font-size: 2rem;
-}
 
-footer.references#footer-size {
-    position: bottom;
-    text-align: right;
-    bottom: 0.5rem;
-    left: 5rem;
-    font font-family: 'Droid Sans';
-    font-size: 2rem;
-}
 
 ul.footer-nav {
     list-style-type: none;
