@@ -18,6 +18,29 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="favicon" href="favicon.ico">
+
+    <script type="text/javascript" > </script>
+
+    <script>
+
+        $(function() {
+
+
+       var currency = [];
+
+       $.getJSON('currencies.json', function(data) {
+           $.each(data.currency, function(i, f) {
+              var tblRow = "<tr>" + "<td>" + f.id + "</td>" +
+               "<td>" + f.name + "</td>" + "<td>" + f.symbol + "</td>" + "<td>" + f.rank + "</td>" + "</tr>"
+               $(tblRow).appendTo("#userdata tbody");
+         });
+
+       });
+
+    });
+    </script>
+
+
 </head>
 <body>
 
@@ -82,10 +105,22 @@
                     </div>
                 </div>
     </div>
-</div>
+    <div class="wrapper">
+    <div class="profile">
+       <table id= "userdata" border="2">
+      <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Symbol</th>
+                <th>Rank</th>
+            </thead>
+          <tbody>
 
+           </tbody>
+       </table>
 
-
+    </div>
+    </div>
 
 </body>
 </html>
