@@ -19,108 +19,74 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="favicon" href="favicon.ico">
 
-    <script type="text/javascript" > </script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
 
-    <script>
+<script>
 
-        $(function() {
+    $(function() {
 
+   $.getJSON('currencies.json', function(data) {
+       $.each(data.currency, function(i, f) {
 
-       var currency = [];
+          var tblRow = "<tr>" + "<td>" + f.name + "</td>" +
+           "<td>" + f.price_usd + "</td>" + "<td>" + f.symbol + "<td>" + f.symbol + "<td>" + "</tr>"
+           $(tblRow).appendTo("#userdata tbody");
+     });
 
-       $.getJSON('currencies.json', function(data) {
-           $.each(data.currency, function(i, f) {
-              var tblRow = "<tr>" + "<td>" + f.id + "</td>" +
-               "<td>" + f.name + "</td>" + "<td>" + f.symbol + "</td>" + "<td>" + f.rank + "</td>" + "</tr>"
-               $(tblRow).appendTo("#userdata tbody");
-         });
+   });
 
-       });
+});
+</script>
 
-    });
-    </script>
 
 
 </head>
 <body>
 
-<div class="intro-align">
-    <div style="display:table; width: 100%">
-        <div style="display:table-caption; text-align: center; font-size:30px; font-weight:bold;">Crypto Currency Calculator</div>
-        <div id=style="display:table-header-group; background-color: gray; font-weight: bold; font-size: 25px;"></div>
-            <div style="display:table-cell; padding:10px;text-align:justify;border-bottom:1px solid black;">
-                Currency
-                </div>
-                <div style="display:table-cell; padding:10px;text-align:justify;border-bottom:1px solid black;">
-                Curent Value
-                </div>
-                <div style="display:table-cell; padding:10px;text-align:justify;border-bottom:1px solid black;">
-                Your Value
-                </div>
-                <div style="display:table-row-group">
-                    <div style="display:table-cell;">BTC</div>
-                    <div style="display:table-cell;">$3000</div>
-                    <div style="display:table-cell;"><textarea>write here..</textarea>
-                    </div>
-                </div>
-                <div style="display:table-row-group">
-                    <div style="display:table-cell;">BCH</div>
-                    <div style="display:table-cell;">$3000</div>
-                    <div style="display:table-cell;"><textarea>write here..</textarea>
-                    </div>
-                </div>
-                <div style="display:table-row-group">
-                    <div style="display:table-cell;">XRP</div>
-                    <div style="display:table-cell;">$3000</div>
-                    <div style="display:table-cell;"><textarea>write here..</textarea>
-                    </div>
-                </div>
-                <div style="display:table-row-group">
-                    <div style="display:table-cell;">IOTA</div>
-                    <div style="display:table-cell;">$3000</div>
-                    <div style="display:table-cell;"><textarea>write here..</textarea>
-                    </div>
-                </div>
-                <div style="display:table-row-group">
-                    <div style="display:table-cell;">ETH</div>
-                    <div style="display:table-cell;">$3000</div>
-                    <div style="display:table-cell;"><textarea>write here..</textarea>
-                    </div>
-                </div>
-                <div style="display:table-row-group">
-                    <div style="display:table-cell;">Litecoin (LTC)</div>
-                    <div style="display:table-cell;">$3000</div>
-                    <div style="display:table-cell;"><textarea>write here..</textarea>
-                    </div>
-                </div>
-                <div style="display: table-footer-group; background-color: gray; font-weight: bold; font-size: 25px; color: rgba(255, 255, 255, 0.45);">
-                    <div style="display:table-cell; padding:10px; text-align: justify; border-bottom: 1 px solid black;">
-                    1
-                    </div>
-                    <div style="display:table-cell; padding:10px; text-align: justify; border-bottom: 1 px solid black;">
-                    Submit
-                    </div>
-                    <div style="display:table-cell; padding:10px; text-align: justify; border-bottom: 1 px solid black;">
-                    <textarea>write here..</textarea>
-                    </div>
-                </div>
-    </div>
-    <div class="wrapper">
-    <div class="profile">
-       <table id= "userdata" border="2">
-      <thead>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Symbol</th>
-                <th>Rank</th>
-            </thead>
-          <tbody>
 
-           </tbody>
-       </table>
 
+<div class="col-md-1"></div>
+<div class="jumbotron new-jumbotron">
+    <div class="container wrap-inside">
+        <div class="row">
+            <div class="col-md-4 wrap-inside"></div>
+            <h1 class="col-md-8 heading-font" id="heading-size">Crypto Currency Calculator</h1>
+            <div class="col-md-8">
+
+                <div class="row">
+                    <div class="intro-align">
+                        <div style="display:table; width: 100%; align-items: center">
+                            <!--<div style="display:table-caption; text-align: center; font-size:30px; font-weight:bold;">Crypto Currency Calculator</div>-->
+                                <table id= "userdata" "display:table-header-group; background-color: gray; font-weight: bold; font-size: 25px;" border="2">
+                                    <thead>
+                                    <!--
+                                    <div style="display:table-cell; padding:10px;text-align:justify;border-bottom:1px solid black;">Currency</div>
+                                    <div style="display:table-cell; padding:10px;text-align:justify;border-bottom:1px solid black;">Curent Value</div>
+                                    <div style="display:table-cell; padding:10px;text-align:justify;border-bottom:1px solid black;">Your Value</div> -->
+                                     <th>Currency</th>
+                                     <th>Current Value</th>
+                                     <th>Your have</th>
+                                     <th>Your asset</th>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
     </div>
-    </div>
+</div>
+
+
+
+
+
+
+
 
 </body>
 </html>

@@ -45,18 +45,19 @@ body {
     font-family: 'Droid Sans';
     font-size: 2.2rem;
     background-color: #111;
+    margin-bottom: 10rem;
 }
 
 h1.heading-font#heading-size {
     font-family: 'Fjalla One', sans-serif;
     font-size: 6rem;
-    margin-bottom: 0rem;
+    margin-bottom: 6.5rem;
     margin-top: 6.5rem;
     left: -2.45em;
-    background-color: black;
+
 }
 
-.body {
+.body {people
     font-family: 'Droid Sans';
     font-size: 2.2rem;
     margin-top: 5rem;
