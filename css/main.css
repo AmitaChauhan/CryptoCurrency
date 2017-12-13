@@ -1,43 +1,8 @@
 
 
-.text-container {
-    max-width: 768px;
-    margin: auto;
-}
-
-.quote {
-    border: 1px none green;
-    font-family: 'Droid Sans';
-    font-size: 2.2rem;
-}
-
-.tilde {
-    border: 1px none blue;
-    text-align: center;
-    font-family: 'Droid Sans';
-    font-size: 2rem;
-}
-
-.verb {
-    text-align: center;
-    font-family: 'Droid Sans';
-    font-size: 1.5rem;
-}
-
 .spacing {
     margin-top: 3rem;
     margin-bottom: 1rem;
-}
-
-
-
-
-
-body {
-    color      : #ddd;
-    font-size  : 3rem;
-    text-align : center;
-    background : url('./images/debut_dark.png');
 }
 
 
@@ -58,51 +23,11 @@ h1.heading-font#heading-size {
 
 }
 
-.body {
-    font-family: 'Droid Sans';
-    font-size: 2.2rem;
-    margin-top: 5rem;
-}
 
 .new-jumbotron {
     background-color: #111;
     color: #ddd;
     padding-top: 0.1rem;
     padding-bottom: 0rem;
-    margin-bottom: 100rem;
-}
-
-.ron {
-    background-color: #111;
-    color: #ddd;
-
-}
-
-.wrap-inside {
-    margin-left: 50 rem;
-}
-
-@media (max-width : 992px) {
-    h1.heading-font#heading-size {
-        left: 0em;
-    }
-    .pic-left-align {
-        text-align: center;;
-    }
-}
-
-
-
-
-ul.footer-nav {
-    list-style-type: none;
-    display: flex;
-}
-
-ul.footer-nav li {
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: column;
+    margin-bottom: 0rem;
 }
