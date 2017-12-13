@@ -23,18 +23,22 @@
 
 <script>
 
-    $(function() {
 
-   $.getJSON('currencies.json', function(data) {
-       $.each(data.currency, function(i, f) {
 
-          var tblRow = "<tr>" + "<td>" + f.name + "</td>" +
-           "<td>" + f.price_usd + "</td>" + "<td>" + f.symbol + "<td>" + f.symbol + "<td>" + "</tr>"
-           $(tblRow).appendTo("#userdata tbody");
-     });
 
-   });
-
+$(document).ready(function () {
+    $.getJSON('https://api.coinmarketcap.com/v1/ticker/',
+    function (json) {
+        var tr;
+        for (var i = 0; i < json.length; i++) {
+            tr = $('<tr/>');
+            tr.append("<td>" + json[i].name + "</td>");
+            tr.append("<td>" + json[i].price_usd + "</td>");
+            tr.append("<td>" + json[i].rank + "</td>");
+            tr.append("<td>" + json[i].price_usd * json[i].rank + "</td>");
+            $('table').append(tr);
+        }
+    });
 });
 </script>
 
@@ -46,7 +50,7 @@
 
 
 <div class="col-md-1"></div>
-<div class="jumbotron new-jumbotron">
+<div class="new-jumbotron">
     <div class="container wrap-inside">
         <div class="row">
             <div class="col-md-4 wrap-inside"></div>
@@ -54,39 +58,33 @@
             <div class="col-md-8">
 
                 <div class="row">
-                    <div class="intro-align">
-                        <div style="display:table; width: 100%; align-items: center">
-                            <!--<div style="display:table-caption; text-align: center; font-size:30px; font-weight:bold;">Crypto Currency Calculator</div>-->
-                                <table id= "userdata" "display:table-header-group; background-color: gray; font-weight: bold; font-size: 25px;" border="2">
-                                    <thead>
-                                    <!--
-                                    <div style="display:table-cell; padding:10px;text-align:justify;border-bottom:1px solid black;">Currency</div>
-                                    <div style="display:table-cell; padding:10px;text-align:justify;border-bottom:1px solid black;">Curent Value</div>
-                                    <div style="display:table-cell; padding:10px;text-align:justify;border-bottom:1px solid black;">Your Value</div> -->
-                                     <th>Currency</th>
-                                     <th>Current Value</th>
-                                     <th>Your have</th>
-                                     <th>Your asset</th>
-                                    </thead>
-                                    <tbody>
+                    <div class="col-md-4 wrap-inside"></div>
+                        <div class="intro-align">
+                            <div style="display:table; width: 100%; align: center">
+                                <!--<div style="display:table-caption; text-align: center; font-size:30px; font-weight:bold;">Crypto Currency Calculator</div>-->
+                                    <table id= "userdata" "display:table-header-group; background-color: gray; font-weight: bold; font-size: 25px; align: center" border="2">
+                                        <thead>
+                                        <!--
+                                        <div style="display:table-cell; padding:10px;text-align:justify;border-bottom:1px solid black;">Currency</div>
+                                        <div style="display:table-cell; padding:10px;text-align:justify;border-bottom:1px solid black;">Curent Value</div>
+                                        <div style="display:table-cell; padding:10px;text-align:justify;border-bottom:1px solid black;">Your Value</div> -->
+                                         <th>Currency</th>
+                                         <th>Current Value</th>
+                                         <th>Your have</th>
+                                         <th>Your asset</th>
+                                        </thead>
+                                        <tbody>
 
-                                    </tbody>
-                                </table>
+                                        </tbody>
+                                    </table>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
             </div>
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
 
 </body>
 </html>
