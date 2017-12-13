@@ -9,22 +9,14 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Fjalla+One|Roboto' rel='stylesheet' type='text/css'>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="css/main.css">
     <link rel="favicon" href="favicon.ico">
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
 
 <script>
-
-
-
 
 $(document).ready(function () {
     $.getJSON('https://api.coinmarketcap.com/v1/ticker/',
@@ -35,16 +27,16 @@ $(document).ready(function () {
             tr.append("<td>" + json[i].name + "</td>");
             tr.append("<td>" + json[i].price_usd + "</td>");
             tr.append("<td>" + json[i].rank + "</td>");
-            tr.append("<td>" + json[i].price_usd * json[i].rank + "</td>");
+            tr.append("<td>" + (json[i].price_usd * json[i].rank).toFixed(2) + "</td>");
             $('table').append(tr);
         }
     });
 });
 </script>
 
-
-
 </head>
+
+
 <body>
 
 
@@ -62,16 +54,12 @@ $(document).ready(function () {
                         <div class="intro-align">
                             <div style="display:table; width: 100%; align: center">
                                 <!--<div style="display:table-caption; text-align: center; font-size:30px; font-weight:bold;">Crypto Currency Calculator</div>-->
-                                    <table id= "userdata" "display:table-header-group; background-color: gray; font-weight: bold; font-size: 25px; align: center" border="2">
+                                    <table id= "userdata" "display:table-header-group; background-color: gray; font-weight: bold; font-size: 25px; text-align: center; align: center" border="2">
                                         <thead>
-                                        <!--
-                                        <div style="display:table-cell; padding:10px;text-align:justify;border-bottom:1px solid black;">Currency</div>
-                                        <div style="display:table-cell; padding:10px;text-align:justify;border-bottom:1px solid black;">Curent Value</div>
-                                        <div style="display:table-cell; padding:10px;text-align:justify;border-bottom:1px solid black;">Your Value</div> -->
-                                         <th>Currency</th>
-                                         <th>Current Value</th>
-                                         <th>Your have</th>
-                                         <th>Your asset</th>
+                                         <th style="text-align:center;">Currency</th>
+                                         <th style="text-align:center">Current Value</th>
+                                         <th style="text-align:center">Your have</th>
+                                         <th style="text-align:center">Your asset</th>
                                         </thead>
                                         <tbody>
 

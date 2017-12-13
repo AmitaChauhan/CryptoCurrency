@@ -31,3 +31,7 @@ h1.heading-font#heading-size {
     padding-bottom: 0rem;
     margin-bottom: 0rem;
 }
+
+.wrap-inside {
+    padding-left: 30rem;
+}
