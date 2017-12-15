@@ -15,6 +15,8 @@
     <link rel="favicon" href="favicon.ico">
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+    <input type = "text" id = "myText" value = "text here" />
+
 
 <script>
 
@@ -22,12 +24,14 @@ $(document).ready(function () {
     $.getJSON('https://api.coinmarketcap.com/v1/ticker/',
     function (json) {
         var tr;
+        var total;
         for (var i = 0; i < json.length; i++) {
             tr = $('<tr/>');
             tr.append("<td>" + json[i].name + "</td>");
             tr.append("<td>" + json[i].price_usd + "</td>");
             tr.append("<td>" + json[i].rank + "</td>");
             tr.append("<td>" + (json[i].price_usd * json[i].rank).toFixed(2) + "</td>");
+            total=total+json[i].rank
             $('table').append(tr);
         }
     });
@@ -58,7 +62,7 @@ $(document).ready(function () {
                                         <thead>
                                          <th style="text-align:center;">Currency</th>
                                          <th style="text-align:center">Current Value</th>
-                                         <th style="text-align:center">Your have</th>
+                                         <th style="text-align:center">You have</th>
                                          <th style="text-align:center">Your asset</th>
                                         </thead>
                                         <tbody>
@@ -67,6 +71,7 @@ $(document).ready(function () {
                                     </table>
 
                                 </div>
+                                <button type="submit" style="color:gray">total</button> <input type = "text" id = "myText" value = "text here" />
                             </div>
                         </div>
             </div>
@@ -75,4 +80,3 @@ $(document).ready(function () {
 </div>
 
 </body>
-</html>
